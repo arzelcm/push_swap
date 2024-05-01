@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 14:33:54 by arcanava          #+#    #+#             */
+/*   Created: 2024/05/01 15:14:06 by arcanava          #+#    #+#             */
 /*   Updated: 2024/05/01 15:15:14 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
-#include "libft.h"
-#include "push_swap.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-void	custom_error(char *message)
-{
-	ft_printff(STDERR_FILENO, "%s\n", message);
-	exit(EXIT_FAILURE);
-}
+# ifndef PROGRAM_NAME
+#  define PROGRAM_NAME "push_swap"
+# endif
 
-void	error(void)
-{
-	perror(PROGRAM_NAME);
-	exit(EXIT_FAILURE);
-}
+
+#endif

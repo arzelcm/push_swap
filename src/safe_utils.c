@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   safe_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 14:33:54 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 15:15:14 by arcanava         ###   ########.fr       */
+/*   Created: 2024/05/01 15:06:29 by arcanava          #+#    #+#             */
+/*   Updated: 2024/05/01 15:13:11 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include "libft.h"
-#include "push_swap.h"
+#include <utils.h>
 
-void	custom_error(char *message)
+void	*safe_malloc(size_t size)
 {
-	ft_printff(STDERR_FILENO, "%s\n", message);
-	exit(EXIT_FAILURE);
-}
+	void	*res;
 
-void	error(void)
-{
-	perror(PROGRAM_NAME);
-	exit(EXIT_FAILURE);
+	res = malloc(size);
+	if (!res)
+		error();
+	return (res);
 }

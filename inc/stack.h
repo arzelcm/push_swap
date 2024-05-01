@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   stack.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 14:33:54 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 15:15:14 by arcanava         ###   ########.fr       */
+/*   Created: 2024/05/01 14:49:25 by arcanava          #+#    #+#             */
+/*   Updated: 2024/05/01 15:35:50 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
-#include "libft.h"
-#include "push_swap.h"
+#ifndef STACK_H
+# define STACK_H
 
-void	custom_error(char *message)
+typedef struct s_stack
 {
-	ft_printff(STDERR_FILENO, "%s\n", message);
-	exit(EXIT_FAILURE);
-}
+	int				num;
+	struct s_stack	*next;
+}	t_stack;
 
-void	error(void)
-{
-	perror(PROGRAM_NAME);
-	exit(EXIT_FAILURE);
-}
+void	push_num_stack(t_stack **stack, int num);
+
+void	fill_stack(t_stack **stack_a, int length, char **argv);
+
+void	print_stack(t_stack *stack);
+
+#endif
