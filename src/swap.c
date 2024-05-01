@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 19:18:40 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 20:37:09 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/01 21:49:21 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 void	swap(t_stack **stack, char id)
 {
-	t_stack *old;
+	t_stack	*old;
 
 	if (!*stack || !(*stack)->next)
 		return ;

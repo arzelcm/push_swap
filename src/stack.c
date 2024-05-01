@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:51:12 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 20:14:54 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/01 21:50:33 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 #include "libft.h"
 #include "utils.h"
 
-void push_num_stack(t_stack **stack, int num)
+void	push_num_stack(t_stack **stack, int num)
 {
-	t_stack *new;
+	t_stack	*new;
 
 	new = safe_malloc(sizeof(t_stack));
 	new->num = num;
@@ -29,7 +29,7 @@ void push_num_stack(t_stack **stack, int num)
 void	print_stack(t_stack *stack)
 {
 	int	i;
-	
+
 	ft_printf("--------\n");
 	i = 0;
 	while (stack)
@@ -43,7 +43,7 @@ void	print_stack(t_stack *stack)
 void	print_stacks(t_stack *stack_a, t_stack *stack_b)
 {
 	int	i;
-	
+
 	ft_printf("--------\n");
 	i = 0;
 	while (stack_a || stack_b)

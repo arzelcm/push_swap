@@ -6,10 +6,9 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 20:58:48 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 21:28:15 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/01 21:52:02 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 #include "stack.h"
@@ -17,7 +16,7 @@
 
 void	rev_rotate(t_stack **stack, char id)
 {
-	t_stack *new_last;
+	t_stack	*new_last;
 
 	if (!*stack || !(*stack)->next)
 		return ;
@@ -30,6 +29,7 @@ void	rev_rotate(t_stack **stack, char id)
 	if (id != BOTH)
 		ft_printf("rr%c\n", id);
 }
+
 void	rev_rotate_both(t_stack **a, t_stack **b)
 {
 	if ((!*a || !(*a)->next) && (!*b || !(*b)->next))

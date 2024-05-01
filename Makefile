@@ -6,7 +6,7 @@
 #    By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/29 11:50:28 by arcanava          #+#    #+#              #
-#    Updated: 2024/05/01 21:28:42 by arcanava         ###   ########.fr        #
+#    Updated: 2024/05/01 21:48:22 by arcanava         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,7 @@ $(NAME): $(LIBFT_LIB) $(OBJS)
 else
 $(NAME): $(LIBFT_LIB) $(BOBJS)
 	@echo "$(BLUE)\nLinking objects and creating binary program...$(DEF_COLOR)"
-	@$(CC) $(CCFLAGS) $(BOBJS) $(LIBFT_LIB) -L$(MLX_DIR) -lmlx $(DARWIN_FLAGS) -o $(NAME)
+	@$(CC) $(CCFLAGS) $(BOBJS) $(LIBFT_LIB) $(DARWIN_FLAGS) -o $(NAME)
 	@echo "$(GREEN)[✓] $(PINK)$(NAME) Bonus$(GREEN) created!!!$(DEF_COLOR)"
 endif
 
@@ -103,12 +103,12 @@ $(BIN_DIR)%_debug.o: $(SRCS_DIR)%.c Makefile
 	@$(CC) -g $(CCFLAGS) $(INCLUDES) -MMD -c $< -o $@
 endif
 
-clean: libft_clean
+clean:	libft_clean
 	@rm -rf $(BIN_DIR)
-	@echo "$(RED)bin/ deleted$(DEF_COLOR)
+	@echo "$(RED)bin/ deleted$(DEF_COLOR)"
 
 fclean: libft_fclean clean
-	@rm -rf $(NAME) $(DEBUG_NAME) $(MLX_DIR)
+	@rm -rf $(NAME)
 	@echo "$(RED)Executable deleted$(DEF_COLOR)\n"
 
 re: fclean all
@@ -152,4 +152,5 @@ n: norme
 
 -include $(DEPS)
 -include $(BDEPS)
+
 .SILENT:

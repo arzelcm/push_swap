@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 19:41:07 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 20:14:39 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/01 21:53:44 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	push(t_stack **src, t_stack **dst, char id)
 {
-	t_stack *target;
+	t_stack	*target;
 
 	target = *src;
 	*src = (*src)->next;
