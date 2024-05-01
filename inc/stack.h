@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:49:25 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 20:10:15 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/01 22:32:35 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 typedef struct s_stack
 {
 	int				num;
+	int				index;
 	struct s_stack	*next;
 }	t_stack;
 

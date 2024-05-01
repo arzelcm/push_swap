@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:51:12 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 21:50:33 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/01 22:39:56 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	push_num_stack(t_stack **stack, int num)
 
 	new = safe_malloc(sizeof(t_stack));
 	new->num = num;
+	new->index = -1;
 	new->next = *stack;
 	*stack = new;
 }
