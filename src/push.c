@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack.h                                            :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 14:49:25 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 20:10:15 by arcanava         ###   ########.fr       */
+/*   Created: 2024/05/01 19:41:07 by arcanava          #+#    #+#             */
+/*   Updated: 2024/05/01 20:14:39 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STACK_H
-# define STACK_H
+#include "stack.h"
+#include "libft.h"
 
-typedef struct s_stack
+void	push(t_stack **src, t_stack **dst, char id)
 {
-	int				num;
-	struct s_stack	*next;
-}	t_stack;
+	t_stack *target;
 
-void	push_num_stack(t_stack **stack, int num);
-
-void	fill_stack(t_stack **stack_a, int length, char **argv);
-
-void	print_stack(t_stack *stack);
-
-void	print_stacks(t_stack *stack_a, t_stack *stack_b);
-
-#endif
+	target = *src;
+	*src = (*src)->next;
+	target->next = *dst;
+	*dst = target;
+	ft_printf("p%c\n", id);
+}

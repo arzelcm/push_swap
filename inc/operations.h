@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack.h                                            :+:      :+:    :+:   */
+/*   operations.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 14:49:25 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 20:10:15 by arcanava         ###   ########.fr       */
+/*   Created: 2024/05/01 19:48:37 by arcanava          #+#    #+#             */
+/*   Updated: 2024/05/01 21:32:03 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STACK_H
-# define STACK_H
+#ifndef OPERATIONS_H
+# define OPERATIONS_H
 
-typedef struct s_stack
-{
-	int				num;
-	struct s_stack	*next;
-}	t_stack;
+# define BOTH 'z'
 
-void	push_num_stack(t_stack **stack, int num);
-
-void	fill_stack(t_stack **stack_a, int length, char **argv);
-
-void	print_stack(t_stack *stack);
-
-void	print_stacks(t_stack *stack_a, t_stack *stack_b);
+# include "stack.h"
+# include "swap.h"
+# include "push.h"
+# include "rotate.h"
+# include "rev_rotate.h"
 
 #endif

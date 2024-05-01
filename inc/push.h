@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack.h                                            :+:      :+:    :+:   */
+/*   push.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 14:49:25 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 20:10:15 by arcanava         ###   ########.fr       */
+/*   Created: 2024/05/01 21:30:52 by arcanava          #+#    #+#             */
+/*   Updated: 2024/05/01 21:31:31 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STACK_H
-# define STACK_H
+#ifndef PUSH_H
+# define PUSH_H
 
-typedef struct s_stack
-{
-	int				num;
-	struct s_stack	*next;
-}	t_stack;
+# include "stack.h"
 
-void	push_num_stack(t_stack **stack, int num);
-
-void	fill_stack(t_stack **stack_a, int length, char **argv);
-
-void	print_stack(t_stack *stack);
-
-void	print_stacks(t_stack *stack_a, t_stack *stack_b);
+void	push(t_stack **src, t_stack **dst, char id);
 
 #endif

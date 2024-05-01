@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:51:12 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 15:51:36 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/01 20:14:54 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,30 @@ void	print_stack(t_stack *stack)
 		stack = stack->next;
 	}
 	ft_printf("--------\n\n");
+}
+
+void	print_stacks(t_stack *stack_a, t_stack *stack_b)
+{
+	int	i;
+	
+	ft_printf("--------\n");
+	i = 0;
+	while (stack_a || stack_b)
+	{
+		if (stack_a)
+		{
+			ft_printf("%i", stack_a->num);
+			stack_a = stack_a->next;
+		}
+		ft_printf("  |  ");
+		if (stack_b)
+		{
+			ft_printf("%i", stack_b->num);
+			stack_b = stack_b->next;
+		}
+		ft_printf("\n");
+	}
+	ft_printf("--------\na  |  b\n\n");
 }
 
 int	is_duplicated(t_stack *stack, int num)

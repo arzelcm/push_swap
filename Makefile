@@ -6,7 +6,7 @@
 #    By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/29 11:50:28 by arcanava          #+#    #+#              #
-#    Updated: 2024/05/01 15:06:08 by arcanava         ###   ########.fr        #
+#    Updated: 2024/05/01 21:28:42 by arcanava         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,11 @@ INCLUDES += -I$(LIBFT_DIR)
 SRCS =	push_swap.c \
 		utils.c \
 		stack.c \
-		safe_utils.c
+		safe_utils.c \
+		swap.c \
+		push.c \
+		rotate.c \
+		rev_rotate.c
 OBJS = $(SRCS:%.c=$(BIN_DIR)%.o)
 DEPS = $(OBJS:%.o=%.d)
 
