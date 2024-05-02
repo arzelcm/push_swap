@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:51:12 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/02 14:34:14 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:55:46 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,19 +78,29 @@ int	is_duplicated(t_stack *stack, int num)
 	return (duplicated);
 }
 
+t_stack	**array_from_stack(t_stack *stack, int len)
+{
+	int	i;
+	t_stack	**arr;
+
+	arr = safe_malloc(sizeof(t_stack) * len);
+	i = 0;
+	while (stack)
+	{
+		arr[i++] = stack;
+		stack = stack->next;
+	}
+	return (arr);
+}
+
 void	index_nodes(t_stack *stack, int len)
 {
 	int		i;
 	int		j;
-	t_stack *ordered_stack[len];
+	t_stack	**ordered_stack;
 	t_stack	*aux;
 
-	i = 0;
-	while (stack)
-	{
-		ordered_stack[i++] = stack;
-		stack = stack->next;
-	}
+	ordered_stack = array_from_stack(stack, len);
 	i = 0;
 	while (i < len)
 	{
@@ -109,6 +119,7 @@ void	index_nodes(t_stack *stack, int len)
 	}
 	while (--i >= 0)
 		ordered_stack[i]->index = i + 1;
+	free(ordered_stack);
 }
 
 void	fill_stack(t_stack **stack, int length, char **argv)
