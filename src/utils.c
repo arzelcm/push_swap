@@ -6,12 +6,10 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:33:54 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 21:49:09 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 23:07:06 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
 #include "libft.h"
 #include "push_swap.h"
 

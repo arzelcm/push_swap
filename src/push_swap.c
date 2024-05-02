@@ -6,13 +6,11 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:29:03 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/02 22:59:39 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 23:02:38 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "utils.h"
-#include "stack.h"
 #include "operations.h"
 #include "radix.h"
 

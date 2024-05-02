@@ -6,13 +6,12 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:06:29 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 21:50:37 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 23:05:07 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
-#include <utils.h>
+#include "utils.h"
 
 void	*safe_malloc(size_t size)
 {

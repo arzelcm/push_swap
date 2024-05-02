@@ -6,11 +6,10 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:51:12 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/02 22:57:56 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 23:06:01 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
 #include "limits.h"
 #include "safe_utils.h"
 #include "libft.h"

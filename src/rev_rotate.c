@@ -6,12 +6,11 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 20:58:48 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 21:52:02 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 23:03:59 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stack.h"
 #include "operations.h"
 
 void	rev_rotate(t_stack **stack, char id)
