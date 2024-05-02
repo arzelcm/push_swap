@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:29:03 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/02 23:02:38 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/03 01:22:41 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	fill_stack(&stack_a, argc - 1, argv + 1);
 	if (is_sorted_stack(stack_a))
-		return (EXIT_SUCCESS);
+		exit(EXIT_SUCCESS);
 	else if (argc - 1 == 2)
 		swap(&stack_a, 'a');
 	else if (argc - 1 == 3)
@@ -99,5 +99,6 @@ int	main(int argc, char **argv)
 		sort_five(&stack_a, &stack_b);
 	else
 		sort_stack_radix(&stack_a, &stack_b, argc - 1);
+	exit(EXIT_SUCCESS);
 	return (EXIT_SUCCESS);
 }
