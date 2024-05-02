@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:51:12 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/02 17:02:05 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:12:11 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,19 @@ void	index_nodes(t_stack *stack, int len)
 	while (--i >= 0)
 		ordered_stack[i]->index = i + 1;
 	free(ordered_stack);
+}
+
+int	is_sorted_stack(t_stack *stack)
+{
+	int	is_sorted;
+
+	is_sorted = 1;
+	while (stack->next && is_sorted)
+	{
+		is_sorted = stack->num < stack->next->num;
+		stack = stack->next;
+	}
+	return (is_sorted);
 }
 
 void	fill_stack(t_stack **stack, int length, char **argv)
