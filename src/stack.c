@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:51:12 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/02 16:55:46 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:02:05 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,7 @@
 #include "safe_utils.h"
 #include "libft.h"
 #include "utils.h"
-
-void	push_num_stack(t_stack **stack, int num)
-{
-	t_stack	*new;
-
-	new = safe_malloc(sizeof(t_stack));
-	new->num = num;
-	new->index = -1;
-	new->next = *stack;
-	*stack = new;
-}
+#include "node.h"
 
 void	print_stack(t_stack *stack)
 {
@@ -63,19 +53,6 @@ void	print_stacks(t_stack *stack_a, t_stack *stack_b)
 		ft_printf("\n");
 	}
 	ft_printf("--------\na  |  b\n\n");
-}
-
-int	is_duplicated(t_stack *stack, int num)
-{
-	int	duplicated;
-
-	duplicated = 0;
-	while (stack && !duplicated)
-	{
-		duplicated = stack->num == num;
-		stack = stack->next;
-	}
-	return (duplicated);
 }
 
 t_stack	**array_from_stack(t_stack *stack, int len)
