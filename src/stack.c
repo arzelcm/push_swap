@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:51:12 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/02 23:06:01 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/03 00:22:46 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	fill_stack(t_stack **stack, int length, char **argv)
 	i = length - 1;
 	while (i >= 0)
 	{
-		if (!ft_isnum(argv[i]))
+		if (!ft_isnum(argv[i], count_digits(INT_MAX)))
 			custom_error("Error\nParams must be integers.");
 		num = ft_atol(argv[i]);
 		if (num > INT_MAX || num < INT_MIN)
