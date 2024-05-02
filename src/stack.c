@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:51:12 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/01 22:39:56 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:34:14 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,39 @@ int	is_duplicated(t_stack *stack, int num)
 	return (duplicated);
 }
 
+void	index_nodes(t_stack *stack, int len)
+{
+	int		i;
+	int		j;
+	t_stack *ordered_stack[len];
+	t_stack	*aux;
+
+	i = 0;
+	while (stack)
+	{
+		ordered_stack[i++] = stack;
+		stack = stack->next;
+	}
+	i = 0;
+	while (i < len)
+	{
+		j = 0;
+		while (j < len - 1)
+		{
+			if (ordered_stack[j + 1]->num < ordered_stack[j]->num)
+			{
+				aux = ordered_stack[j + 1];
+				ordered_stack[j + 1] = ordered_stack[j];
+				ordered_stack[j] = aux;
+			}
+			j++;
+		}
+		i++;
+	}
+	while (--i >= 0)
+		ordered_stack[i]->index = i + 1;
+}
+
 void	fill_stack(t_stack **stack, int length, char **argv)
 {
 	int		i;
@@ -96,6 +129,7 @@ void	fill_stack(t_stack **stack, int length, char **argv)
 		push_num_stack(stack, (int) num);
 		i--;
 	}
+	index_nodes(*stack, length);
 	ft_printf("Filled stack (%p)\n", *stack);
 	print_stack(*stack);
 }
