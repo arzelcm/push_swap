@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:51:12 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/02 20:59:01 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 22:57:56 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,18 @@ void	fill_stack(t_stack **stack, int length, char **argv)
 		i--;
 	}
 	index_nodes(*stack, length);
+}
+
+int	get_min_stack_num(t_stack *stack)
+{
+	int	min;
+
+	min = stack->num;
+	while (stack)
+	{
+		if (min > stack->num)
+			min = stack->num;
+		stack = stack->next;
+	}
+	return (min);
 }

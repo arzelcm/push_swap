@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:49:25 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/02 20:59:06 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 22:41:09 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ void	push_num_stack(t_stack **stack, int num);
 void	fill_stack(t_stack **stack_a, int length, char **argv);
 
 int		is_sorted_stack(t_stack *stack);
+
+int		get_min_stack_num(t_stack *stack);
 
 #endif

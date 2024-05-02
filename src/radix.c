@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 18:03:30 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/02 21:20:33 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 22:55:40 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 #include "operations.h"
 
-void	sort_stack(t_stack **stack_a, t_stack **stack_b, int len)
+void	sort_stack_radix(t_stack **stack_a, t_stack **stack_b, int len)
 {
 	int	bit;
 	int	i;

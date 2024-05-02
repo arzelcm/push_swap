@@ -6,11 +6,9 @@
 #    By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/29 11:50:28 by arcanava          #+#    #+#              #
-#    Updated: 2024/05/02 18:10:32 by arcanava         ###   ########.fr        #
+#    Updated: 2024/05/02 22:57:38 by arcanava         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-# TODO: Check Cflags!
 
 NAME = push_swap
 
@@ -27,7 +25,7 @@ CIAN = \033[1;36m
 
 #----COMPILER----#
 CC = cc
-CCFLAGS = -Wall -Werror -Wextra -g #-O3 #-fsanitize=thread #-fsanitize=address
+CCFLAGS = -Wall -Werror -Wextra
 
 #----DIRS----#
 BIN_DIR = bin/
@@ -114,9 +112,6 @@ fclean: libft_fclean clean
 	@echo "$(RED)Executable deleted$(DEF_COLOR)\n"
 
 re: fclean all
-
-bonus: 
-	@$(MAKE) --no-print-directory BONUS=1
 
 b: bonus
 
