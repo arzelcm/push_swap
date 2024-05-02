@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:29:03 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/02 17:14:49 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/02 19:00:53 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "utils.h"
 #include "stack.h"
 #include "operations.h"
+#include "radix.h"
 
 int	main(int argc, char **argv)
 {
@@ -30,28 +31,7 @@ int	main(int argc, char **argv)
 		ft_printf("sorted!\n");
 		return (EXIT_SUCCESS);
 	}
-	
-	// swap(&stack_a, 'a');
-	// print_stacks(stack_a, stack_b);
-
-	// push(&stack_a, &stack_b, 'b');
-	// push(&stack_a, &stack_b, 'b');
-	// push(&stack_a, &stack_b, 'b');
-	// print_stacks(stack_a, stack_b);
-
-	// rotate_both(&stack_a, &stack_b);
-	// print_stacks(stack_a, stack_b);
-
-	// rev_rotate_both(&stack_a, &stack_b);
-	// print_stacks(stack_a, stack_b);
-
-	// swap(&stack_a, 'a');
-	// print_stacks(stack_a, stack_b);
-
-	// push(&stack_b, &stack_a, 'a');
-	// push(&stack_b, &stack_a, 'a');
-	// push(&stack_b, &stack_a, 'a');
-	// print_stacks(stack_a, stack_b);
-
-	return (0);
+	else
+		sort_stack(&stack_a, &stack_b, argc - 1);
+	return (EXIT_SUCCESS);
 }
