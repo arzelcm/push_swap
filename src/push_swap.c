@@ -6,7 +6,7 @@
 /*   By: arcanava <arcanava@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:29:03 by arcanava          #+#    #+#             */
-/*   Updated: 2024/05/03 01:22:41 by arcanava         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:59:16 by arcanava         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	main(int argc, char **argv)
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 
-	if (argc < 3)
+	if (argc < 2)
 		return (EXIT_SUCCESS);
 	stack_a = NULL;
 	stack_b = NULL;
